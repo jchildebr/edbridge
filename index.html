@@ -54,61 +54,71 @@
             line-height: 1.6;
         }
 
-        .hero a {
-            text-decoration: none;
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .hero button {
+        .cta-button {
             background-color: #FF5722;
             color: white;
-            padding: 15px 40px;
+            padding: 15px 30px;
             border: none;
             border-radius: 30px;
             font-size: 1.2rem;
             font-weight: bold;
-            cursor: pointer;
+            text-decoration: none;
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease-in-out;
         }
 
-        .hero button:hover {
+        .cta-button:hover {
             background-color: #E64A19;
             transform: translateY(-5px);
             box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
         }
 
-        /* Adding subtle animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .cta-button.secondary {
+            background-color: #4CAF50;
         }
 
-        .hero h2,
-        .hero p,
-        .hero button {
-            animation: fadeIn 1s ease-out;
+        .cta-button.secondary:hover {
+            background-color: #388E3C;
         }
 
-        .hero h2 {
-            animation-delay: 0.2s;
+        .benefits-section {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .hero p {
-            animation-delay: 0.4s;
+        .benefits-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
         }
 
-        .hero button {
-            animation-delay: 0.6s;
+        .benefits-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .benefits-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-section li {
+            font-size: 1.1rem;
+            margin: 10px 0;
         }
 
         .testimonial-section {
             background-color: #111827;
             padding: 50px 20px;
             color: white;
+            text-align: center;
         }
 
         .testimonial {
@@ -117,13 +127,29 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            text-align: center;
         }
 
         .testimonial-author {
             font-size: 1.2rem;
             font-weight: bold;
             margin-top: 10px;
+        }
+
+        .cta-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cta h2 {
+            font-size: 1.8rem;
+            color: #333;
         }
 
         /* Responsive adjustments */
@@ -136,9 +162,17 @@
                 font-size: 1rem;
             }
 
-            .hero button {
-                padding: 12px 30px;
+            .cta-button {
+                padding: 12px 20px;
                 font-size: 1rem;
+            }
+
+            .cta-section {
+                flex-direction: column;
+            }
+
+            .cta {
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -151,22 +185,56 @@
 
     <section class="hero">
         <div>
-            <h2>Connecting Tech Talent with German SMEs</h2>
-            <p>Empowering professionals to succeed through language and relocation support.</p>
-            <a href="https://forms.gle/CQPF5FpEswytNht78" target="_blank">
-                <button>Get Started</button>
-            </a>
+            <h2>Bridging the Gap Between Global Tech Talent and German SMEs</h2>
+            <p>Your partner in connecting SMEs with top-tier tech talent and offering seamless relocation and language support.</p>
+            <div class="buttons">
+                <a href="#for-smes" class="cta-button">For SMEs</a>
+                <a href="#for-professionals" class="cta-button secondary">For Professionals</a>
+            </div>
         </div>
+    </section>
+
+    <section id="for-smes" class="benefits-section">
+        <h2>For German SMEs</h2>
+        <p>Unlock access to global tech talent with EdBridge's unique talent-matching, language, and relocation solutions.</p>
+        <ul>
+            <li>Find tech talent that matches your company's needs</li>
+            <li>We handle language training and relocation logistics</li>
+            <li>Long-term retention strategies for your workforce</li>
+        </ul>
+    </section>
+
+    <section id="for-professionals" class="benefits-section">
+        <h2>For Professionals</h2>
+        <p>EdBridge supports your journey to a fulfilling career in Germany by offering:</p>
+        <ul>
+            <li>Career opportunities with innovative German companies</li>
+            <li>Full relocation support, including visa processing</li>
+            <li>German language training and cultural integration</li>
+        </ul>
     </section>
 
     <section class="testimonial-section">
         <div class="testimonial">
-            "EdBridge helped me transition seamlessly to a new life and career in Germany. Their support was unparalleled."
-            <div class="testimonial-author">- Amit Sharma, Software Engineer</div>
+            <h3>For SMEs</h3>
+            <p>"EdBridge helped us find top-tier software engineers and made the relocation process simple and efficient."</p>
+            <div class="testimonial-author">- Anna Müller, HR Director at TechSolutions GmbH</div>
         </div>
         <div class="testimonial">
-            "The language support and career coaching made all the difference. I highly recommend EdBridge!"
-            <div class="testimonial-author">- Neha Patel, Data Scientist</div>
+            <h3>For Professionals</h3>
+            <p>"With EdBridge's support, I transitioned to a new career in Germany smoothly. Their language and relocation help made it seamless."</p>
+            <div class="testimonial-author">- Amit Sharma, Senior Developer</div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta">
+            <h2>Ready to find the best talent?</h2>
+            <a href="https://forms.gle/sme-signup" class="cta-button">For SMEs: Get Started</a>
+        </div>
+        <div class="cta">
+            <h2>Looking for opportunities in Germany?</h2>
+            <a href="https://forms.gle/professional-signup" class="cta-button secondary">For Professionals: Apply Now</a>
         </div>
     </section>
 
