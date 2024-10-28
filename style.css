@@ -15,7 +15,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -32,7 +32,7 @@ header {
 }
 
 .hero h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -77,6 +77,46 @@ header {
 
 .cta-button.secondary:hover {
     background-color: #388E3C;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.benefits-section {
+    width: 48%; /* Allows the sections to sit side by side */
+    text-align: left;
+}
+
+.benefits-container::before {
+    content: "";
+    display: block;
+    width: 1px;
+    background-color: #ccc; /* Thin dividing line */
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+    }
+
+    .benefits-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .benefits-container::before {
+        display: none; /* Hides dividing line on mobile */
+    }
 }
 
 .benefits-section {
@@ -149,6 +189,49 @@ header {
     margin-top: 10px;
 }
 
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #111827;
+    color: white;
+    position: relative; /* Necessary for the dividing line */
+}
+
+.testimonial {
+    width: 48%; /* Allows testimonials to sit side by side */
+    text-align: left;
+}
+
+.testimonial-container::before {
+    content: "";
+    display: block;
+    width: 1px;
+    background-color: #ccc; /* Thin dividing line */
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-container::before {
+        display: none; /* Hide the dividing line on mobile */
+    }
+}
+
 .cta-section {
     display: flex;
     justify-content: space-around;
@@ -157,11 +240,45 @@ header {
     flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
 }
 
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative; /* Necessary for the dividing line */
+}
+
 .cta {
+    width: 48%; /* Allows CTA sections to sit side by side */
     text-align: center;
-    padding: 20px;
-    flex: 1 1 300px; /* Ensures each .cta takes up at least 300px and grows */
-    margin: 10px; /* Adds space around each CTA box */
+}
+
+.cta-container::before {
+    content: "";
+    display: block;
+    width: 1px;
+    background-color: #ccc; /* Thin dividing line */
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .cta-container {
+        flex-direction: column;
+    }
+
+    .cta {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .cta-container::before {
+        display: none; /* Hide the dividing line on mobile */
+    }
 }
 
 .cta h2 {
