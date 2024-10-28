@@ -13,132 +13,175 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            font-family: 'Helvetica', sans-serif;
             color: #333;
+            background-color: #f0f0f0;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .hero {
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
+            position: relative;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-button {
+            background-color: #FF5722;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #E64A19;
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-button.secondary {
+            background-color: #4CAF50;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #388E3C;
+        }
+
+        .benefits-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .benefits-section h2 {
+            font-size: 2.5rem;
+            color: #333;
             margin-bottom: 20px;
         }
 
-        .hero button {
-            background-color: #FF5722;
+        .benefits-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .benefits-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-section li {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        /* Adding the new image */
+        .benefits-image {
+            max-width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-section {
+            background-color: #111827;
+            padding: 50px 20px;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            text-align: center;
         }
 
-        .hero button:hover {
-            background-color: #E64A19;
+        .testimonial {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .features {
+        .testimonial-author {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .cta-section {
             display: flex;
             justify-content: space-around;
             padding: 50px 20px;
             background-color: #f4f4f4;
         }
 
-        .features .feature-box {
-            width: 30%;
-            text-align: center;
-        }
-
-        .features h3 {
-            margin-bottom: 15px;
-        }
-
-        .features p {
-            font-size: 1.1rem;
-        }
-
         .cta {
             text-align: center;
-            padding: 50px;
-            background-color: #333;
-            color: white;
-        }
-
-        .cta button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .cta button:hover {
-            background-color: #388E3C;
-        }
-
-        footer {
-            text-align: center;
             padding: 20px;
-            background-color: #222;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
 
+        .cta h2 {
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .features {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+
+            .cta-section {
                 flex-direction: column;
             }
 
-            .features .feature-box {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
+            .cta {
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -146,55 +189,65 @@
 <body>
 
     <header>
-        <h1>EdBridge</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        EdBridge
     </header>
 
     <section class="hero">
         <div>
-            <h2>Connecting Tech Talent with German SMEs</h2>
-            <p>Empowering professionals to succeed through language and relocation support.</p>
-            <button>Get Started</button>
+            <h2>Bridging the Gap Between Global Tech Talent and German SMEs</h2>
+            <p>Your partner in connecting SMEs with top-tier tech talent and offering seamless relocation and language support.</p>
+            <div class="buttons">
+                <a href="#for-smes" class="cta-button">For SMEs</a>
+                <a href="#for-professionals" class="cta-button secondary">For Professionals</a>
+            </div>
         </div>
     </section>
 
-    <section class="features">
-        <div class="feature-box">
-            <h3>Bridge the Gap</h3>
-            <p>Helping tech professionals from India connect with German companies in need of talent.</p>
+    <img src="https://www.cio.com/wp-content/uploads/2023/10/shutterstock_1906255501.jpg?quality=50&strip=all&w=1024" alt="Tech Talent" class="benefits-image">
+    
+    <section id="for-smes" class="benefits-section">
+        <h2>For German SMEs</h2>
+        <p>Unlock access to global tech talent with EdBridge's unique talent-matching, language, and relocation solutions.</p>
+        <ul>
+            <li>Find tech talent that matches your company's needs</li>
+            <li>We handle language training and relocation logistics</li>
+            <li>Long-term retention strategies for your workforce</li>
+        </ul>
+    </section>
+
+    <section id="for-professionals" class="benefits-section">
+        <h2>For Professionals</h2>
+        <p>EdBridge supports your journey to a fulfilling career in Germany by offering:</p>
+        <ul>
+            <li>Career opportunities with innovative German companies</li>
+            <li>Full relocation support, including visa processing</li>
+            <li>German language training and cultural integration</li>
+        </ul>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="testimonial">
+            <h3>For SMEs</h3>
+            <p>"EdBridge helped us find top-tier software engineers and made the relocation process simple and efficient."</p>
+            <div class="testimonial-author">- Anna Müller, HR Director at TechSolutions GmbH</div>
         </div>
-        <div class="feature-box">
-            <h3>Language & Relocation</h3>
-            <p>Offering support for German language courses and smooth relocation to Germany.</p>
-        </div>
-        <div class="feature-box">
-            <h3>SME Solutions</h3>
-            <p>Helping German SMEs find and retain top talent in a competitive market.</p>
+        <div class="testimonial">
+            <h3>For Professionals</h3>
+            <p>"With EdBridge's support, I transitioned to a new career in Germany smoothly. Their language and relocation help made it seamless."</p>
+            <div class="testimonial-author">- Amit Sharma, Senior Developer</div>
         </div>
     </section>
 
-    <section class="cta">
-        <h2>Are you ready to find the right talent for your business?</h2>
-        <button>Join EdBridge Today</button>
+    <section class="cta-section">
+        <div class="cta">
+            <h2>Ready to find the best talent?</h2>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMUdZKb29B3JKxv2Ws_fKIXeUjG8nbP4NEUK-UjTLjuSSumA/viewform" target="_blank" class="cta-button">For SMEs: Get Started</a>
+        </div>
+        <div class="cta">
+            <h2>Looking for opportunities in Germany?</h2>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMUdZKb29B3JKxv2Ws_fKIXeUjG8nbP4NEUK-UjTLjuSSumA/viewform" target="_blank" class="cta-button secondary">For Professionals: Apply Now</a>
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 EdBridge. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Scroll to features section when button is clicked
-        document.querySelector('.hero button').addEventListener('click', () => {
-            document.querySelector('.features').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
 
 </body>
 </html>
